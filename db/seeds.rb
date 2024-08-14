@@ -16,7 +16,8 @@ puts 'Creating 5 restaurants...'
   restaurant = Restaurant.new(
     name: Faker::Restaurant.name,
     address: Faker::Address.full_address,
-    category: ['chinese', 'italian', 'japanese', 'french', 'belgian'].sample
+    category: ['chinese', 'italian', 'japanese', 'french', 'belgian'].sample,
+    phone_number: Faker::PhoneNumber.phone_number_with_country_code
   )
   restaurant.save!
 end
